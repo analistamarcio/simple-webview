@@ -1,5 +1,7 @@
 const { app, BrowserWindow } = require('electron')
 
+const config = require('./config')
+
 function createWindow() {
   // Create the browser window.
   const win = new BrowserWindow({
@@ -13,7 +15,11 @@ function createWindow() {
   })
 
   // and load the index.html of the app.
-  win.loadFile('index.html')
+  // Examples:
+  // win.loadFile('index.html')
+  // win.loadFile('http://localhost:3000/')
+  // win.loadFile('https://www.google.ca')
+  win.loadFile(config.url)
 
 }
 

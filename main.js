@@ -5,6 +5,8 @@ function createWindow() {
   const win = new BrowserWindow({
     width: 800,
     height: 600,
+    titleBarStyle: "hidden",
+    alwaysOnTop: true,
     webPreferences: {
       nodeIntegration: true
     }
@@ -13,8 +15,6 @@ function createWindow() {
   // and load the index.html of the app.
   win.loadFile('index.html')
 
-  // Open the DevTools.
-  win.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished
